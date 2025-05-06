@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tooltip</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <br /><br />
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      data-bs-title="Tooltip on top"
+    >
+      Tooltip on top
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="tooltip"
+      data-bs-placement="right"
+      data-bs-title="Tooltip on right"
+    >
+      Tooltip on right
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      data-bs-title="Tooltip on bottom"
+    >
+      Tooltip on bottom
+    </button>
+    <button
+      type="button"
+      class="btn btn-success"
+      data-bs-toggle="tooltip"
+      data-bs-placement="left"
+      data-bs-title="Tooltip on left"
+    >
+      Tooltip on left
+    </button>
+
+    <table class="table table-success table-striped" style="margin-top: 20px">
+      <tr class="table-primary">
+        <th>nn</th>
+        <th>mm</th>
+      </tr>
+      <tr class="table-secondary">
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr class="table-success">
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr class="table-danger">
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr class="table-warning">
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr class="table-info">
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr class="table-light">
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr class="table-dark">
+        <td>2</td>
+        <td>1</td>
+      </tr>
+    </table>
+
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>
