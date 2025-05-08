@@ -1,93 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Official Ferrari Website</title>
-    <!-- Bootstrap CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- external CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- NAVBAR start -->
-     
-    <nav class="navbar navbar-expand-lg text-light">
-      <div class="container-fluid ">
-        <a class="navbar-brand bg-danger" href="#">
-          <img
-            src="dist/images/w-logo.png"
-            alt="Ferrari"
-            width="36"
-            height="50"
-            style="margin-left: 24px"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light " >
-            <li class="nav-item 
-            " >
-              <a class="nav-link active" aria-current="page" href="racing">
-                RACING
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sports-cars"> SPORTS CARS </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="collection"> COLLECTIONS </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"> EXPERIENCES </a>
-            </li>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Official Ferrari Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
 
-            <li class="nav-item">
-              <a class="nav-link" href="about-us"> ABOUT US </a>
-            </li>
-          </ul>
+  <!-- external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <a class="nav-link" href="Search" style="margin-right: 20px;">
-              SEARCH
+<body>
+  <!-- NAVBAR start -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark transparent fixed-top shadow-5-strong ">
+    <div class="container-fluid ">
+      <a class="navbar-brand " href="#">
+        <img src="dist/images/w-logo.png" alt="Ferrari" width="36" height="50" style="margin-left: 24px" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+          <li class="nav-item 
+            ">
+            <a class="nav-link text-white fw-semibold active" aria-current="page" href="racing">
+              RACING
             </a>
-          </form>
-        </div>
-      </div>
-    </nav>
-    
-    <!-- NAVBAR end -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="sports-cars"> SPORTS CARS </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="collection"> COLLECTIONS </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold"> EXPERIENCES </a>
+          </li>
 
-    <!-- HERO start -->
- <section id="hero" class="min-vh-100 d-flex align-item-center text-center">
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="about-us"> ABOUT US </a>
+          </li>
+        </ul>
 
-<div class="container">
-  <div class="row">
-    <div class="col12">
-      <h1 class="test-uppercase text-white fw-semibold display-1">PURE DRIVING PLEASURE</h1>
-      <div>
-        <a href="#" class="btn-btn-light"> 296 SPECIAL</a>
-        <a href="#" class="btn-btn-light"> 296 SPECIAL A </a>
+        <a class="nav-link text-white fw-semibold" href="Search" style="margin-right: 20px;">
+          SEARCH
+        </a>
+        </form>
       </div>
     </div>
-  </div>
-</div>
-       </section>
+  </nav>
+
+  <!-- NAVBAR end -->
+
+  <!-- HERO start -->
+  <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col12">
+          <h1 class="text-uppercase text-white fw-semibold display-5">PURE DRIVING PLEASURE</h1>
+          <div>
+            <div class="Cover__link__2sunY9Xb text-white btn btn-outline-light bg-transparent me-3 w-25"> 296 SPECIAL </div>
+            <div class="Cover__button-wrap__14haVmlp text-white btn btn-outline-light bg-transparent ms-3 w-25"> 296 SPECIAL A </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-    <!-- HERO end -->
+  <!-- HERO end -->
 
-    <script src="dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- carousel start -->
+
+  <section carousel>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <video src="dist/images/video2.mp4" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <video src="dist/images/video6.mp4" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <video src="dist/images/video5.mp4" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- carousel end -->
+
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

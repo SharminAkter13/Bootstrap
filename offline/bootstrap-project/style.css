@@ -25,6 +25,9 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
+.navbar .nabbar-nav{
+  color: white;
+}
 
 .navbar-brand {
   margin-block-start: 0.67em;
@@ -37,9 +40,14 @@ html {
 
 ul li {
   padding: 12px;
+  font-weight: bold;
+  color: rgb(245, 247, 248);
+  margin-left: 12px;
 }
 
 #hero {
-  background-image: url(dist/images/Screenshot_2.png);
+  background-image: url(dist/images/cv.png);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
