@@ -51,3 +51,54 @@ ul li {
   background-size: cover;
   background-position: center;
 }
+
+.carousel-indicators {
+  position: absolute; /* Ensure they are positioned correctly */
+  right: 0;
+  bottom: 10px; /* Adjust vertical position */
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: disc;
+}
+
+.carousel-indicators li {
+  position: relative;
+  width: 10px; /* Adjust the width of the inactive dots */
+  height: 10px; /* Adjust the height of the inactive dots */
+  margin-right: 5px; /* Adjust spacing between dots */
+  margin-left: 5px;
+  text-indent: -999px; /* Hide the default text */
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white for inactive */
+  background-clip: padding-box;
+  border-radius: 50%; /* Make them circles */
+  border-top: 0;
+  border-bottom: 0;
+  transition: .3s ease;
+}
+
+.carousel-indicators .active {
+  width: 14px; /* Adjust the width of the active dot/ring */
+  height: 14px; /* Adjust the height of the active dot/ring */
+  background-color: transparent; /* Make the background transparent for the ring */
+  border: 2px solid red; /* Add the red ring */
+}
+.carousel-item video {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust the width of the navigation buttons */
+}
+
+.image-text div{
+  display: flex;
+}
+
