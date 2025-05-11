@@ -128,3 +128,9 @@ ul li {
 .footer-logo{
   height: 40px;
 }
+
+
+.bg-secondary {
+  --bs-bg-opacity: 5;
+  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
