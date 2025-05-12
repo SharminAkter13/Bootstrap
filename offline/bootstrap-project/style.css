@@ -44,6 +44,9 @@ ul li {
   color: rgb(245, 247, 248);
   margin-left: 12px;
 }
+.newsletter {
+  background-color: #3b3838 !important;
+}
 
 #hero {
   background-image: url(dist/images/cv.png);
@@ -125,12 +128,14 @@ ul li {
   object-fit: cover; /* Ensure image covers the container */
 }
 
-.footer-logo{
+.footer-logo {
   height: 40px;
 }
 
-
 .bg-secondary {
   --bs-bg-opacity: 5;
-  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(
+    var(--bs-secondary-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
 }
