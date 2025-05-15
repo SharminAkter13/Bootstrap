@@ -140,7 +140,7 @@ ul li {
   ) !important;
 }
 
-.container {
+.img-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
   grid-template-rows: repeat(
@@ -159,7 +159,7 @@ ul li {
 }
 
 .grid-item img {
-  width: 75%; /* Image takes up 50% of the container width */
+  width: 100%; /* Image takes up 50% of the container width */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Removes any extra space below the image */
 }
