@@ -187,3 +187,22 @@ ul li {
   text-align: center;
   /* Add more styling as needed */
 }
+.circular-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #12121200;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.3s ease; /* Smooth transition for the border */
+}
+
+.circular-button:hover {
+  outline: 2px solid rgb(201, 27, 27); 
+  background-color: rgba(255, 255, 255, 0.014);/* Add a white outline on hover */
+}
+
+
