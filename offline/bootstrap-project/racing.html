@@ -3,370 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferrari Inspired Layout</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Sidebar Layout with Bootstrap 5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <style>
         body {
-            font-family: sans-serif;
-            background-color: #111;
-            color: #eee;
-            margin: 0;
             overflow-x: hidden;
         }
-
-        .offcanvas-nav {
+        .sidebar {
+            height: 100vh;
             position: fixed;
-            top: 0;
-            left: 0;
             width: 250px;
-            height: 100%;
-            background-color: #222;
-            color: #eee;
-            z-index: 1050;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-            overflow-y: auto;
+            background-color: #111;
+            color: white;
+            transition: all 0.3s;
         }
-
-        .offcanvas-nav.show {
-            transform: translateX(0);
+        .sidebar a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
         }
-
-        .nav-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            border-bottom: 1px solid #333;
-        }
-
-        .nav-header .logo {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-        }
-
-        .nav-header .btn-close {
-            background: none;
-            border: none;
-            color: #eee;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.2s ease;
-        }
-
-        .nav-header .btn-close:hover {
-            opacity: 1;
-        }
-
-        .nav-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-item {
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            border-bottom: 1px solid #333;
-            transition: background-color 0.2s ease;
-        }
-
-        .nav-item:hover {
+        .sidebar a:hover {
             background-color: #333;
         }
-
-        .nav-item.active {
-            background-color: #444;
-        }
-
-        .nav-item .arrow {
-            font-size: 0.8rem;
-        }
-
-        .nav-submenu {
-            padding-left: 1.5rem;
-            display: none;
-            list-style: none;
-            margin: 0;
-        }
-
-        .nav-submenu.show {
-            display: block;
-        }
-
-        .nav-submenu-item {
-            padding: 0.5rem 0;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-            border-bottom: 1px solid #333;
-        }
-
-         .nav-submenu-item:last-child{
-             border-bottom: none;
-         }
-
-        .nav-submenu-item:hover {
-            background-color: #444;
-        }
-
         .main-content {
-            margin-left: 0;
-            transition: margin-left 0.3s ease-in-out;
-            /* height: 100vh;  Remove this to avoid potential scrollbar issues*/
-            overflow: auto; /* Add this to the main content */
-        }
-
-        .main-content.shifted {
             margin-left: 250px;
+            height: 100vh;
+            background-image: url('your-image-path.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s;
         }
-
-        .top-bar {
-            background-color: #1a1a1a;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #333;
+        .menu-title {
+            margin-left: 20px;
+            font-size: 1.2rem;
+            margin-top: 15px;
         }
-
-        .top-bar-text {
-            font-size: 0.9rem;
+        .nav-group {
+            margin-bottom: 10px;
         }
-
-        .carousel-container {
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            position: relative;
+        .dropdown-toggle::after {
+            margin-left: 10px;
         }
-
-        .carousel-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        #toggle-btn {
+            display: none;
             position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
         }
-
-        .carousel-container img.active {
-            opacity: 1;
-            z-index: 1;
-        }
-
-        .carousel-controls {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 2;
-        }
-
-        .carousel-control {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #555;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: background-color 0.2s ease;
-        }
-
-        .carousel-control:hover {
-            opacity: 1;
-            background-color: #eee;
-        }
-
-        .carousel-control.active {
-            background-color: #eee;
-            opacity: 1;
+        @media (max-width: 768px) {
+            .sidebar {
+                left: -250px;
+            }
+            .sidebar.active {
+                left: 0;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            #toggle-btn {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- <header class="top-bar">
-        <button class="btn btn-dark btn-lg rounded-0" id="openNav">
-            <i class="bi bi-list"></i>
-        </button>
-        <div class="top-bar-text">
-            Italian GP 2024
+    <button id="toggle-btn" class="btn btn-secondary">☰</button>
+    
+    <div class="sidebar">
+        <div class="nav-group">
+            <p class="menu-title">RACING</p>
+            <a href="#">Formula 1</a>
+            <a href="#">Endurance</a>
+            <a href="#">Esports</a>
+            <a href="#">Driver Academy</a>
         </div>
-    </header> -->
+        <div class="nav-group">
+            <a href="#">Home</a>
+            <a href="#">SF-25</a>
 
-    <nav class="offcanvas-nav" id="offcanvasNav">
-        <div class="nav-header">
-            <div class="logo">
-                <i class="bi bi-flag-fill text-danger"></i>
+            <a class="dropdown-toggle" data-bs-toggle="collapse" href="#teamMenu" role="button">
+                Team
+            </a>
+            <div class="collapse" id="teamMenu">
+                <a href="#" class="ps-4">Drivers</a>
+                <a href="#" class="ps-4">Engineers</a>
             </div>
-            <button type="button" class="btn-close" id="closeNav" aria-label="Close">
-                <i class="bi bi-x-lg"></i>
-            </button>
-        </div>
-        <ul class="nav-list">
-            <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#racingSubmenu" aria-expanded="false" aria-controls="racingSubmenu">
-                <span>RACING</span>
-                <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-            </li>
-            <ul class="collapse nav-submenu" id="racingSubmenu">
-                <li class="nav-submenu-item">Formula 1</li>
-                <li class="nav-submenu-item">Endurance</li>
-                <li class="nav-submenu-item">Esports</li>
-                <li class="nav-submenu-item">Driver Academy</li>
-            </ul>
-            <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#formula1Submenu" aria-expanded="true" aria-controls="formula1Submenu">
-                <span>Formula 1</span>
-                <span class="arrow"><i class="bi bi-chevron-down"></i></span>
-            </li>
-            <ul class="collapse nav-submenu show" id="formula1Submenu">
-                <li class="nav-submenu-item active">Home</li>
-                <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#sf25Submenu" aria-expanded="true" aria-controls="sf25Submenu">
-                    <span>SF-25</span>
-                    <span class="arrow"><i class="bi bi-chevron-down"></i></span>
-                </li>
-                <ul class="collapse nav-submenu show" id="sf25Submenu">
-                    <li class="nav-submenu-item active">Team</li>
-                    <li class="nav-submenu-item">News</li>
-                    <li class="nav-submenu-item">Races</li>
-                    <li class="nav-submenu-item">Partners</li>
-                    <li class="nav-submenu-item">Hospitality</li>
-                </ul>
-                <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#mediaSubmenu" aria-expanded="false" aria-controls="mediaSubmenu">
-                    <span>Media Galleries</span>
-                    <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-                </li>
-                <ul class="collapse nav-submenu" id="mediaSubmenu">
-                    <li class="nav-submenu-item">Gallery 1</li>
-                    <li class="nav-submenu-item">Gallery 2</li>
-                </ul>
-                <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#historySubmenu" aria-expanded="false" aria-controls="historySubmenu">
-                    <span>History</span>
-                    <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-                </li>
-                <ul class="collapse nav-submenu" id="historySubmenu">
-                    <li class="nav-submenu-item">Year 1</li>
-                    <li class="nav-submenu-item">Year 2</li>
-                </ul>
-            </ul>
-        </ul>
-    </nav>
 
-    <main class="main-content">
-        <div class="carousel-container">
-            <img src="https://via.placeholder.com/1920x500/800000/FFFFFF?text=Ferrari+Pit+Crew+1" alt="Ferrari Pit Crew 1" class="active">
-            <img src="https://via.placeholder.com/1920x500/800000/FFFFFF?text=Ferrari+Pit+Crew+2" alt="Ferrari Pit Crew 2">
-        </div>
-        <div class="carousel-controls">
-            <div class="carousel-control active" data-slide="0"></div>
-            <div class="carousel-control" data-slide="1"></div>
-        </div>
-    </main>
+            <a href="#">News</a>
+            <a href="#">Races</a>
+            <a href="#">Partners</a>
+            <a href="#">Hospitality</a>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <a class="dropdown-toggle" data-bs-toggle="collapse" href="#mediaMenu" role="button">
+                Media Galleries
+            </a>
+            <div class="collapse" id="mediaMenu">
+                <a href="#" class="ps-4">Photos</a>
+                <a href="#" class="ps-4">Videos</a>
+            </div>
+
+            <a class="dropdown-toggle" data-bs-toggle="collapse" href="#historyMenu" role="button">
+                History
+            </a>
+            <div class="collapse" id="historyMenu">
+                <a href="#" class="ps-4">Team History</a>
+                <a href="#" class="ps-4">Famous Races</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Main content area -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-       const openNavBtn = document.getElementById('openNav');
-        const closeNavBtn = document.getElementById('closeNav');
-        const offcanvasNav = document.getElementById('offcanvasNav');
-        const mainContent = document.querySelector('.main-content');
-        const navItemsWithSubmenu = document.querySelectorAll('.nav-item[data-bs-toggle="collapse"]');
-        const submenus = document.querySelectorAll('.nav-submenu');
-
-        //mobile menu
-        openNavBtn.addEventListener('click', () => {
-            offcanvasNav.classList.add('show');
-            mainContent.classList.add('shifted');
+        const toggleBtn = document.getElementById('toggle-btn');
+        const sidebar = document.querySelector('.sidebar');
+        
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
         });
-
-        closeNavBtn.addEventListener('click', () => {
-            offcanvasNav.classList.remove('show');
-            mainContent.classList.remove('shifted');
-        });
-
-        document.addEventListener('click', (event) => {
-            if (offcanvasNav.classList.contains('show') && !offcanvasNav.contains(event.target) && !openNavBtn.contains(event.target)) {
-                offcanvasNav.classList.remove('show');
-                mainContent.classList.remove('shifted');
-            }
-        });
-
-       //submenu toggle
-        navItemsWithSubmenu.forEach(item => {
-            item.addEventListener('click', () => {
-                const targetId = item.getAttribute('data-bs-target');
-                const submenu = document.querySelector(targetId);
-                const arrow = item.querySelector('.arrow i');
-
-                if (submenu.classList.contains('show')) {
-                    submenu.classList.remove('show');
-                     arrow.classList.remove('bi-chevron-down');
-                    arrow.classList.add('bi-chevron-right');
-                } else {
-                    submenu.classList.add('show');
-                    arrow.classList.remove('bi-chevron-right');
-                    arrow.classList.add('bi-chevron-down');
-                }
-            });
-        });
-
-        //carousel
-        const carouselImages = document.querySelectorAll('.carousel-container img');
-        const carouselControls = document.querySelectorAll('.carousel-controls .carousel-control');
-        let currentImageIndex = 0;
-        let intervalId;
-
-        function showImage(index) {
-            carouselImages.forEach((img, i) => {
-                img.classList.remove('active');
-                if (i === index) {
-                    img.classList.add('active');
-                }
-            });
-            carouselControls.forEach((control, i) => {
-                control.classList.remove('active');
-                if (i === index) {
-                    control.classList.add('active');
-                }
-            });
-            currentImageIndex = index;
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-            showImage(currentImageIndex);
-        }
-
-        function startCarousel() {
-            intervalId = setInterval(nextImage, 5000);
-        }
-
-        function stopCarousel() {
-            clearInterval(intervalId);
-        }
-
-        carouselControls.forEach((control, index) => {
-            control.addEventListener('click', () => {
-                stopCarousel();
-                showImage(index);
-                startCarousel();
-            });
-        });
-
-        startCarousel();
-
-        mainContent.addEventListener('mouseenter', stopCarousel);
-        mainContent.addEventListener('mouseleave', startCarousel);
-
-        //initial active state
-        showImage(currentImageIndex);
     </script>
 </body>
 </html>
