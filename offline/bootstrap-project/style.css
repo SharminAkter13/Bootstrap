@@ -56,10 +56,9 @@ ul li {
 }
 
 .carousel-indicators {
-  position: absolute; /* Ensure they are positioned correctly */
+  position: absolute;
   right: 0;
-  bottom: 10px; /* Adjust vertical position */
-  left: 0;
+  bottom: 10px;
   z-index: 15;
   display: flex;
   justify-content: center;
@@ -71,30 +70,24 @@ ul li {
 
 .carousel-indicators li {
   position: relative;
-  width: 10px; /* Adjust the width of the inactive dots */
-  height: 10px; /* Adjust the height of the inactive dots */
-  margin-right: 5px; /* Adjust spacing between dots */
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
   margin-left: 5px;
-  text-indent: -999px; /* Hide the default text */
+  text-indent: -999px;
   cursor: pointer;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.5
-  ); /* Semi-transparent white for inactive */
+  background-color: rgba(255, 255, 255, 0.5);
   background-clip: padding-box;
-  border-radius: 50%; /* Make them circles */
+  border-radius: 50%;
   border-top: 0;
   border-bottom: 0;
   transition: 0.3s ease;
 }
 
 .carousel-indicators .active {
-  width: 14px; /* Adjust the width of the active dot/ring */
-  height: 14px; /* Adjust the height of the active dot/ring */
-  background-color: transparent; /* Make the background transparent for the ring */
-  border: 2px solid red; /* Add the red ring */
+  width: 14px;
+  background-color: transparent;
+  border: 2px solid red;
 }
 .carousel-item video {
   max-width: 100%;
@@ -103,29 +96,29 @@ ul li {
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%; /* Adjust the width of the navigation buttons */
+  width: 5%;
 }
 
 .second-carousel {
-  height: 400px; /* Adjust as needed */
+  height: 400px;
 }
 .second-carousel-content {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 5rem; /* Adjust left and right padding */
+  padding: 0 5rem;
 }
 .second-carousel-text {
   flex: 1;
   width: 50%;
-  padding-right: 2rem; /* Space between text and image */
+  padding-right: 2rem;
 }
 .second-carousel-image {
   flex: 1;
   width: 50%;
   height: 100%;
-  object-fit: cover; /* Ensure image covers the container */
+  object-fit: cover;
 }
 
 .footer-logo {
@@ -142,38 +135,33 @@ ul li {
 
 .img-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
-  grid-template-rows: repeat(
-    3,
-    500px
-  ); /* Creates three rows with a height of 500px each */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 500px);
   padding: 0;
   margin: 0;
-  width: 100%; /* Makes the container fluid */
+  width: 100%;
 }
 
 .grid-item {
   padding: 0;
   margin: 0;
-  overflow: hidden; /* Ensures the image stays within the container */
+  overflow: hidden;
 }
 
 .grid-item img {
-  width: 100%; /* Image takes up 50% of the container width */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Removes any extra space below the image */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .image-with-text {
-  position: relative; /* To position the text overlay */
-  width: 100%;
+  position: relative;
   height: 100%;
 }
 
 .image-with-text img {
-  width: 100%; /* Image fills the entire container */
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the area without distortion */
+  width: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -181,15 +169,14 @@ ul li {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the text */
-  color: white; /* Example text color */
-  font-size: 24px; /* Example font size */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
   text-align: center;
-  /* Add more styling as needed */
 }
 .circular-button {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #12121200;
   border: none;
@@ -197,15 +184,18 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: border 0.3s ease; /* Smooth transition for the border */
+  transition: border 0.3s ease;
 }
 
 .circular-button:hover {
   outline: 2px solid rgb(201, 27, 27);
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.014
-  ); /* Add a white outline on hover */
+  background-color: rgba(255, 255, 255, 0.014);
+}
+
+.image-with-text img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-with-text:hover img {
+  transform: scale(1.1);
 }
