@@ -1,320 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Four Vertical Section Layout</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Racing</title>
+    <link
+      href="dist/images/d-logo.png"
+      rel="icon"
+      type="image/x-icon"
+      sizes="32*38"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <style>
-        body {
-            font-family: sans-serif;
-            background-color: #111;
-            color: #eee;
-            margin: 0;
-            display: flex; /* Use flexbox for the main layout */
-            height: 100vh; /* Ensure full viewport height */
-            overflow-x: hidden;  /* Prevent horizontal scrollbar */
-        }
+      body {
+        font-family: sans-serif;
+        background-color: #111;
+        color: #eee;
+        margin: 0;
+        display: flex; /* Use flexbox for the main layout */
+        height: 100vh; /* Ensure full viewport height */
+        overflow-x: hidden; /* Prevent horizontal scrollbar */
+      }
 
-        /* 1st Section: Logo and Close Button */
-        .logo-section {
-            width: 10%;
-            background-color: #222;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            border-right: 1px solid #333;
-        }
+      /* 1st Section: Logo and Close Button */
+      .logo-section {
+        width: 10%;
+        background-color: #222;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid #333;
+      }
 
-        .logo-section .logo {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
+      .logo-section .logo {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
 
-        .logo-section .btn-close {
-            background: none;
-            border: none;
-            color: #eee;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.2s ease;
-            margin-top: auto; 
-        }
+      .logo-section .btn-close {
+        background: none;
+        border: none;
+        color: #eee;
+        font-size: 1.5rem;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+        margin-top: auto;
+      }
 
-        .logo-section .btn-close:hover {
-            opacity: 1;
-        }
+      .logo-section .btn-close:hover {
+        opacity: 1;
+      }
 
-        /*  Vertical Navbar */
-        .nav-section {
-            width: 15%;
-            background-color: #222;
-            padding-top: 1rem;
-            border-right: 1px solid #333;
-            overflow-y: auto; 
-        }
+      /*  Vertical Navbar */
+      .nav-section {
+        width: 15%;
+        background-color: #222;
+        padding-top: 1rem;
+        border-right: 1px solid #333;
+        overflow-y: auto;
+      }
 
-        .nav-section .nav-heading {
-            padding: 1rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-bottom: 1px solid #333;
-            margin-bottom: 0;
-        }
+      .nav-section .nav-heading {
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-bottom: 1px solid #333;
+        margin-bottom: 0;
+      }
 
-        .nav-section .nav-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+      .nav-section .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-        .nav-section .nav-item {
-            padding: 0.75rem 1rem;
-            cursor: pointer;
-            border-bottom: 1px solid #333;
-            transition: background-color 0.2s ease;
-        }
+      .nav-section .nav-item {
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        border-bottom: 1px solid #333;
+        transition: background-color 0.2s ease;
+      }
 
-        .nav-section .nav-item:hover {
-            background-color: #333;
-        }
+      .nav-section .nav-item:hover {
+        background-color: #333;
+      }
 
-        .nav-section .nav-item.active {
-            background-color: #444;
-        }
+      .nav-section .nav-item.active {
+        background-color: #444;
+      }
 
-        .nav-section .nav-item .arrow {
-            font-size: 0.8rem;
-            margin-left: auto; 
-        }
+      .nav-section .nav-item .arrow {
+        font-size: 0.8rem;
+        margin-left: auto;
+      }
 
-        /*  Navbar Dropdown Content */
-        .dropdown-content-section {
-            width: 15%;
-            background-color: #2a2a2a;
-            padding-top: 1rem;
-            overflow-y: auto;
-        }
+      /*  Navbar Dropdown Content */
+      .dropdown-content-section {
+        width: 15%;
+        background-color: #2a2a2a;
+        padding-top: 1rem;
+        overflow-y: auto;
+      }
 
-        .dropdown-content-section .dropdown-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+      .dropdown-content-section .dropdown-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-        .dropdown-content-section .dropdown-item {
-            padding: 0.75rem 1rem;
-            border-bottom: 1px solid #d66060;
-            transition: background-color 0.2s ease;
-            cursor: pointer;
-        }
+      .dropdown-content-section .dropdown-item {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #d66060;
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+      }
 
-        .dropdown-content-section .dropdown-item:hover {
-            background-color: #554d4d;
-        }
+      .dropdown-content-section .dropdown-item:hover {
+        background-color: #554d4d;
+      }
 
-        .dropdown-content-section .dropdown-item.active {
-            background-color: #444;
-        }
-        .dropdown-content-section .dropdown-menu{
-            display: none;
-        }
-        
-        .dropdown-content-section .dropdown-menu.show{
-             display: block; 
-             
-        }
+      .dropdown-content-section .dropdown-item.active {
+        background-color: #444;
+      }
+      .dropdown-content-section .dropdown-menu {
+        display: none;
+      }
 
-        .dropdown-toggle::after {
-    
-    display: none;
-}
+      .dropdown-content-section .dropdown-menu.show {
+        display: block;
+      }
 
+      .dropdown-toggle::after {
+        display: none;
+      }
 
-.dropdown-section {
-    background-color: #333;
-    height: 100vh;
-    color: white;
-    overflow-y: auto;
-    position: relative;
-}
+      .dropdown-section {
+        background-color: #333;
+        height: 100vh;
+        color: white;
+        overflow-y: auto;
+        position: relative;
+      }
 
-#dropdownMenu {
-    right: 0;
-    height: 100%;
-    background-color: #444;
-    overflow-y: auto;
-    padding: 15px 0;
-}
+      #dropdownMenu {
+        right: 0;
+        height: 100%;
+        background-color: #444;
+        overflow-y: auto;
+        padding: 15px 0;
+      }
 
-#dropdownMenu .nav-item {
-    padding: 15px 20px;
-    cursor: pointer;
-}
+      #dropdownMenu .nav-item {
+        padding: 15px 20px;
+        cursor: pointer;
+      }
 
-#dropdownMenu .nav-item:hover {
-    background-color: #555;
-}
+      #dropdownMenu .nav-item:hover {
+        background-color: #555;
+      }
 
-        /* Image Section */
-        .image-section {
-            background-image: url(dist/images/pic1.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            flex: 1; 
-            background-color: #222;
-            padding: 1rem;
-            overflow: hidden; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-        }
+      /* Image Section */
+      .image-section {
+        background-image: url(dist/images/pic1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex: 1;
+        background-color: #222;
+        padding: 1rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .image-section img {
-            max-width: 100%; 
-            max-height: 100%;
-            object-fit: contain;  
-        }
-        .full-height {
-            height: 100vh;
-        }
+      .image-section img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      .full-height {
+        height: 100vh;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="logo-section full-height">
-        <div class="logo">
-            <a href="index.html">
-                <img src="dist/images/w-logo.png" width="24" alt="">
-            </a>
-        </div>
+      <div class="logo">
         <a href="index.html">
-        <button class="btn-close" id="closeNav" aria-label="Close">
-            <i class="bi bi-x-lg"></i>
-        </button>
+          <img src="dist/images/w-logo.png" width="24" alt="" />
         </a>
+      </div>
+      <a href="index.html">
+        <button class="btn-close" id="closeNav" aria-label="Close">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </a>
     </div>
 
     <nav class="nav-section full-height">
-        <h2 class="nav-heading">RACING</h2>
-        <ul class="nav-list">
-            <li class="nav-item dropdown has-submenu formula" data-bs-target="#formula1Submenu">
-                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Formula 1 <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-                    </a>
-                   <ul class="dropdown-menu bg-dark h-100vh w-25" >
-            <li class="dropdown-item active  text-light">Team</li>
+      <h2 class="nav-heading">RACING</h2>
+      <ul class="nav-list">
+        <li
+          class="nav-item dropdown has-submenu formula"
+          data-bs-target="#formula1Submenu"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Formula 1
+            <span class="arrow"><i class="bi bi-chevron-right"></i></span>
+          </a>
+          <ul class="dropdown-menu bg-dark h-100vh w-25">
+            <li class="dropdown-item active text-light">Team</li>
             <li class="dropdown-item text-light bg-black\">News</li>
             <li class="dropdown-item text-light bg-black">Races</li>
             <li class="dropdown-item text-light bg-black">Partners</li>
             <li class="dropdown-item text-light bg-black">Hospitality</li>
-        </ul>
-            </li>
-            <li class="nav-item dropdown has-submenu " data-bs-target="#enduranceSubmenu">
-                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          </ul>
+        </li>
+        <li
+          class="nav-item dropdown has-submenu"
+          data-bs-target="#enduranceSubmenu"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Endurance
+            <span class="arrow"><i class="bi bi-chevron-right"></i></span
+          ></a>
 
-                Endurance <span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
-
-                <ul class="dropdown-menu bg-dark h-100vh w-25">
+          <ul class="dropdown-menu bg-dark h-100vh w-25">
             <li class="dropdown-item text-light bg-black">Endurance Team 1</li>
-            <li class="dropdown-item text-light bg-black" >Endurance News 2</li>
-        </ul>
-            </li>
-            <li class="nav-item has-submenu" data-bs-target="#esportsSubmenu">
-                Esports <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-            </li>
-            <li class="nav-item has-submenu" data-bs-target="#driverAcademySubmenu">
-                Driver Academy <span class="arrow"><i class="bi bi-chevron-right"></i></span>
-            </li>
-        </ul>
+            <li class="dropdown-item text-light bg-black">Endurance News 2</li>
+          </ul>
+        </li>
+        <li class="nav-item has-submenu" data-bs-target="#esportsSubmenu">
+          Esports <span class="arrow"><i class="bi bi-chevron-right"></i></span>
+        </li>
+        <li class="nav-item has-submenu" data-bs-target="#driverAcademySubmenu">
+          Driver Academy
+          <span class="arrow"><i class="bi bi-chevron-right"></i></span>
+        </li>
+      </ul>
     </nav>
 
-    
-
-    <div class="image-section full-height">
-    </div>
+    <div class="image-section full-height"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const navItems = document.querySelectorAll('.nav-section .nav-item.has-submenu');
-        const dropdownMenus = document.querySelectorAll('.dropdown-content-section .dropdown-menu');
-        const mainImage = document.getElementById('mainImage');
-        const logoSection = document.querySelector('.logo-section');
-        const navSection = document.querySelector('.nav-section');
-        const dropdownSection = document.querySelector('.dropdown-content-section');
-        const imageSection = document.querySelector('.image-section');
-        const body = document.querySelector('body');
+      const navItems = document.querySelectorAll(
+        ".nav-section .nav-item.has-submenu"
+      );
+      const dropdownMenus = document.querySelectorAll(
+        ".dropdown-content-section .dropdown-menu"
+      );
+      const mainImage = document.getElementById("mainImage");
+      const logoSection = document.querySelector(".logo-section");
+      const navSection = document.querySelector(".nav-section");
+      const dropdownSection = document.querySelector(
+        ".dropdown-content-section"
+      );
+      const imageSection = document.querySelector(".image-section");
+      const body = document.querySelector("body");
 
-        const closeNavBtn = document.getElementById('closeNav');
+      const closeNavBtn = document.getElementById("closeNav");
 
-        let isNavOpen = true; //initial state of nav
+      let isNavOpen = true; //initial state of nav
 
-        function adjustLayout(isNavOpen) {
-            if (isNavOpen) {
-                logoSection.style.width = '10%';
-                navSection.style.width = '15%';
-                dropdownSection.style.width = '15%';
-                imageSection.style.width = '60%';
-            } else {
-                logoSection.style.width = '10%';
-                navSection.style.width = '15%';
-                dropdownSection.style.width = '0%';
-                imageSection.style.width = '75%';
-            }
+      function adjustLayout(isNavOpen) {
+        if (isNavOpen) {
+          logoSection.style.width = "10%";
+          navSection.style.width = "15%";
+          dropdownSection.style.width = "15%";
+          imageSection.style.width = "60%";
+        } else {
+          logoSection.style.width = "10%";
+          navSection.style.width = "15%";
+          dropdownSection.style.width = "0%";
+          imageSection.style.width = "75%";
         }
+      }
 
-        function updateImage(selectedMenu) {
-            switch (selectedMenu) {
-                case 'Formula 1':
-                    mainImage.src = "dist/images/pic1.jpga";
-                    break;
-                case 'Endurance':
-                    mainImage.src = "https://via.placeholder.com/600x400?text=Endurance";
-                    break;
-                 case 'Esports':
-                    mainImage.src = "https://via.placeholder.com/600x400?text=Esports";
-                    break;
-                case 'Driver Academy':
-                    mainImage.src = "https://via.placeholder.com/600x400?text=Driver+Academy";
-                    break;
-                default:
-                    mainImage.src = "https://via.placeholder.com/600x400?text=Ferrari+Racing";
-            }
+      function updateImage(selectedMenu) {
+        switch (selectedMenu) {
+          case "Formula 1":
+            mainImage.src = "dist/images/pic1.jpga";
+            break;
+          case "Endurance":
+            mainImage.src =
+              "https://via.placeholder.com/600x400?text=Endurance";
+            break;
+          case "Esports":
+            mainImage.src = "https://via.placeholder.com/600x400?text=Esports";
+            break;
+          case "Driver Academy":
+            mainImage.src =
+              "https://via.placeholder.com/600x400?text=Driver+Academy";
+            break;
+          default:
+            mainImage.src =
+              "https://via.placeholder.com/600x400?text=Ferrari+Racing";
         }
+      }
 
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const targetId = item.getAttribute('data-bs-target');
-                if (targetId) {
-                    dropdownMenus.forEach(menu => menu.classList.remove('show'));
-                    const targetMenu = document.getElementById(targetId);
-                    if (targetMenu) {
-                        targetMenu.classList.add('show');
-                    }
-                    updateImage(item.textContent.trim());
-                }
-            });
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const targetId = item.getAttribute("data-bs-target");
+          if (targetId) {
+            dropdownMenus.forEach((menu) => menu.classList.remove("show"));
+            const targetMenu = document.getElementById(targetId);
+            if (targetMenu) {
+              targetMenu.classList.add("show");
+            }
+            updateImage(item.textContent.trim());
+          }
         });
+      });
 
-        closeNavBtn.addEventListener('click', () => {
-            isNavOpen = false;
-            adjustLayout(isNavOpen);
-            dropdownMenus.forEach(menu => menu.classList.remove('show'));
-            navItems.forEach(item => {
-                item.classList.remove('active');
-            });
-             //set default image.
-            updateImage("RACING");
-
+      closeNavBtn.addEventListener("click", () => {
+        isNavOpen = false;
+        adjustLayout(isNavOpen);
+        dropdownMenus.forEach((menu) => menu.classList.remove("show"));
+        navItems.forEach((item) => {
+          item.classList.remove("active");
         });
+        //set default image.
+        updateImage("RACING");
+      });
 
-       //initial layout
-       adjustLayout(isNavOpen);
-       updateImage("RACING");
-
+      //initial layout
+      adjustLayout(isNavOpen);
+      updateImage("RACING");
     </script>
-</body>
+  </body>
 </html>
