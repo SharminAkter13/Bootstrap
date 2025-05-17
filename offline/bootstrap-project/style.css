@@ -201,8 +201,11 @@ ul li {
 }
 
 .circular-button:hover {
-  outline: 2px solid rgb(201, 27, 27); 
-  background-color: rgba(255, 255, 255, 0.014);/* Add a white outline on hover */
+  outline: 2px solid rgb(201, 27, 27);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.014
+  ); /* Add a white outline on hover */
 }
-
-
