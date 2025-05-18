@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Listing Layout</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="dist/images/d-logo.png" rel="icon" type="image/x-icon" sizes="32*38">
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" >
+
+ 
+   
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link href="dist/css/bootstrap.min.css" rel="stylesheet" >
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+   
+    <link rel="stylesheet" href="style.css">
 
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
 
-        
+
         /* Video Background */
         .video-background {
             position: absolute;
@@ -49,18 +55,21 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
-        .image-with-text img {
-  transition: transform 0.3s ease-in-out;
-}
 
-.image-with-text:hover img {
-  transform: scale(1.1);
-}
-body {
+        .image-with-text img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-with-text:hover img {
+            transform: scale(1.1);
+        }
+
+        body {
             font-family: sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f8f8f8; /* Light background */
+        
+            background-color: #f8f8f8;
+            /* Light background */
         }
 
         .img-text {
@@ -117,71 +126,71 @@ body {
             border-radius: 5px;
             font-size: 1em;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+         
         }
 
         .info-column .button:hover {
             background-color: #dc2b2b;
         }
-
-
     </style>
 </head>
+
 <body class="bg-gray-100">
     <section>
-        <div class="header">
-            <!-- NAVBAR start -->
-            
-            <nav class="navbar navbar-expand-lg navbar-dark transparent fixed-top shadow-5-strong ">
-                <div class="container-fluid ">
-                    <a class="navbar-brand " href="#">
-                        <img src="dist/images/w-logo.png" alt="Ferrari" width="36" height="50" style="margin-left: 24px" />
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <header>
+         <!-- NAVBAR start -->
+
+  <nav class="navbar navbar-expand-lg  navbar-dark  fixed-top ">
+    <div class="container-fluid ">
+      <a class="navbar-brand " href="index.html">
+        <img src="dist/images/w-logo.png" alt="Ferrari" width="36" height="50" style="margin-left: 24px" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        
         <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
-            <li class="nav-item 
+            
+          <li class="nav-item 
             ">
             <a class="nav-link text-white fw-semibold active" aria-current="page" href="racing1.html">
               RACING
             </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link text-white fw-semibold" href="sports-car.html"> SPORTS CARS </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-semibold" href="collection.html"> COLLECTIONS </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-semibold" href="experience.html"> EXPERIENCES </a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link text-white fw-semibold" href="about-us.html"> ABOUT US </a>
-            </li>
+            <a class="nav-link text-white fw-semibold" href="sports-car.html"> SPORTS CARS </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="style-page.html"> COLLECTIONS </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold"> EXPERIENCES </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="about-us"> ABOUT US </a>
+          </li>
         </ul>
-        
-        
-    </form>
-</div>
-<a class="nav-link text-white fw-semibold" href="search.html" style="margin-right: 20px;">
-    SEARCH
-</a>
-</div>
-</nav>
-</div>
+
+
+      </div>
+      <a class="nav-link text-white fw-semibold" href="search.html" style="margin-right: 20px;">
+        SEARCH
+      </a>
+    </div>
+  </nav>
+    </header>
 
 
     </section>
-<!-- NAVBAR end -->
+    <!-- NAVBAR end -->
 
     <!-- Video Background -->
     <video autoplay loop muted class="video-background">
         <source src="dist/images/dcinologo_whitebag (720p).mp4" type="video/mp4">
-        
+
     </video>
 
     <!-- Dark Overlay -->
@@ -190,75 +199,257 @@ body {
     <!-- Main Content -->
     <div class="content">
         <div>
-            <h1 style="color: rgb(243, 220, 220); font-size: 28pt; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder; font-style: italic;">FERRARI TOTE BAGS</h1>
+            <h1
+                style="color: rgb(243, 220, 220); font-size: 28pt; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder; font-style: italic;">
+                FERRARI TOTE BAGS</h1>
         </div>
     </div>
 
     <div class="text w-100 ms-lg-5">
-        <p style="text-align: center; width: 40%; margin-left: 380px; font-size: 16pt; margin-top: 20px;">Ferrari presents a versatile new tote bag with a refined, functional design, suitable for all kinds of situations, including city adventures and lifestyle-resort getaways.</p>
+        <p style="text-align: center; width: 40%; margin-left: 380px; font-size: 16pt; margin-top: 20px;">Ferrari
+            presents a versatile new tote bag with a refined, functional design, suitable for all kinds of situations,
+            including city adventures and lifestyle-resort getaways.</p>
     </div>
 
-<!-- card section -->
+    <!-- card section
     <div class="container mx-auto px-4 py-10">
         <h2 class="text-2xl font-semibold text-gray-800 mb-6">MUST HAVE</h2>
         <div class="flex flex-row overflow-x-auto gap-6">
             <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
                 <div class="relative image-with-text">
                     <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
-                    <img class="img-fluid" src="dist/images/2nd/pic9.webp" alt="Product 1" class="w-full h-48 object-cover rounded-md mb-4">
+                    <img  src="dist/images/2nd/pic9.webp" alt="Product 1"
+                        class="w-full h-48 object-cover rounded-md ">
                 </div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Scuba sweatshirt with Ferrari logo</h3>
-                <p class="text-gray-700 font-bold mb-2">£390</p>
+                <h3 class="text-lg font-semibold text-gray-800 ">Scuba sweatshirt with Ferrari logo</h3>
+                <p class="text-gray-700 font-bold ">£390</p>
                 <p class="text-sm text-gray-500">2 Colors</p>
             </div>
             <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
                 <div class="relative image-with-text">
                     <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
-                    <img class="img-fluid" src="dist/images/2nd/pic10.webp" alt="Product 2" class="w-full h-48 object-cover rounded-md mb-4">
+                    <img  src="dist/images/2nd/pic10.webp" alt="Product 2"
+                        class="w-full h-48 object-cover rounded-md ">
                 </div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Small tote bag in raffia and leather</h3>
-                <p class="text-gray-700 font-bold mb-2">£1,390</p>
-            </div>
-            <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
-                 <div class="relative image-with-text">
-                    <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
-                    <img class="img-fluid" src="dist/images/2nd/pic11.webp" alt="Product 3" class="w-full h-48 object-cover rounded-md mb-4">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Denim jacket</h3>
-                <p class="text-gray-700 font-bold mb-2">£1,290</p>
+                <h3 class="text-lg font-semibold text-gray-800 ">Small tote bag in raffia and leather</h3>
+                <p class="text-gray-700 font-bold ">£1,390</p>
             </div>
             <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
                 <div class="relative image-with-text">
                     <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
-                    <img class="img-fluid" src="dist/images/2nd/pic12.webp" alt="Product 4" class="w-full h-48 object-cover rounded-md mb-4">
+                    <img  src="dist/images/2nd/pic11.webp" alt="Product 3"
+                        class="w-full h-48 object-cover rounded-md ">
                 </div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Cotton and silk cardigan</h3>
+                <h3 class="text-lg font-semibold text-gray-800 ">Denim jacket</h3>
+                <p class="text-gray-700 font-bold ">£1,290</p>
+            </div>
+            <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
+                <div class="relative image-with-text">
+                    <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
+                    <img src="dist/images/2nd/pic12.webp" alt="Product 4"
+                        class="w-full h-48 object-cover rounded-md ">
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 ">Cotton and silk cardigan</h3>
                 <p class="text-gray-700 font-bold mb-2">£590</p>
                 <p class="text-sm text-gray-500">2 Colors</p>
             </div>
         </div>
-    </div>
+    </div> -->
 
-   <div class="container img-text">
-        <div class="image-column">
-            
-            <img src="dist/images/2nd/pic1.avif" alt="Product Image">
+    <div class="container-fluid img-text mt-lg-5 w-100" style="width: 100%;">
+        <div class="image-column align-content-center" style="width: 50% !important; float: left !important;">
+
+            <img src="dist/images/2nd/pic1.avif"  alt="Product Image">
         </div>
-        <div class="info-column">
+        <div class="info-column"  style="width: 40% !important; float: left !important;">
             <h2>VERSATILE<br>DESIGN</h2>
-            <p>Available in small and medium sizes, this spacious tote bag boasts a stylish A-line shape accompanied by two handles and an adjustable drawstring.</p>
+            <p>Available in small and medium sizes, this spacious tote bag boasts a stylish A-line shape accompanied by
+                two handles and an adjustable drawstring.</p>
             <a href="#" class="button">DISCOVER</a>
         </div>
     </div>
 
     <div class="container mt-4">
-        <h1 class="section-title " style="font-size: 18pt; font-weight: bold; margin-top: 10px; margin-left: 50px; margin-bottom: 10px;">MIXED MATERIALS</h1>
+        <h1 class="section-title "
+            style="font-size: 18pt; font-weight: bold; margin-top: 10px; margin-left: 50px; margin-bottom: 10px;">MIXED
+            MATERIALS</h1>
         <div class="image-container">
-            <img style="margin-left: 27px;" src="dist/images/2nd/pic2.avif" alt="Mixed Materials Product">
+            <img class="img-fluid mb-4"  src="dist/images/2nd/pic2.avif" alt="Mixed Materials Product">
         </div>
     </div>
-        <script src="dist/js/bootstrap.bundle.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" ></script>
+
+    
+  <!-- newsletter -->
+  <section class="newsletter" style="background-color: #333a3d;">
+    <div class="bg-secondary py-5 text-center " style="background-color: #353738 !important;">
+      <div class="container-fluid" >
+        <h2 class="text-light mb-3">Newsletter</h2>
+        <p class="text-light mb-4">Stay up to date with the latest news from the world of Ferrari.</p>
+        <button class="btn btn-danger btn-lg">SUBSCRIBE</button>
+      </div>
+    </div>
+  </section>
+  <!-- newsletter -->
+
+
+  <!-- FOOTER start -->
+  <footer class="bg-dark text-light ">
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col-md-2 mb-4 mb-md-0 me-lg-4 ms-lg-2 mt-4">
+          <h6 class="text-uppercase fw-bold mb-3">RACING</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-light">Scuderia Ferrari HP</a></li>
+            <li><a href="#" class="text-decoration-none text-light">charles Leclerc</a></li>
+            <li><a href="#" class="text-decoration-none text-light">lewis hamilton</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Hypercar</a></li>
+            <li><a href="#" class="text-decoration-none text-light">GT Series</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Esports</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Scuderia Ferrari Driver Academy</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Scuderia Ferrari Member</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0 me-lg-4 mt-4">
+          <h6 class="text-uppercase fw-bold mb-3">SPORTS CARS</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-light">Range</a></li>
+            <li><a href="#" class="text-decoration-none text-light"> Configure your Ferrari</a></li>
+            <li><a href="#" class="text-decoration-none text-light">MyFerrari</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Pre-owned</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Dealers</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Recall information</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Techinfo</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0 me-lg-4 mt-4">
+          <h6 class="text-uppercase fw-bold mb-3">COLLECTIONS</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-light">Men</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Women</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Kids</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Shoes</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Eyewear</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Collectibles</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Scuderia Ferrari Selection</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0 me-lg-4 mt-4">
+          <h6 class="text-uppercase fw-bold mb-3">EXPERIENCES</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-light"> Corse Clienti</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Ferrari Race Series</a></li>
+            <li><a href="#" class="text-decoration-none text-light"> Ristorante cavallino</a></li>
+            <li><a href="#" class="text-decoration-none text-light"> Ferrari Museums</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Ferrari World Abu Dhabi</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Ferrari Land Barcelona</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0 me-lg-4 mt-4">
+          <h6 class="text-uppercase fw-bold mb-3">ABOUT US</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-light">Corporate</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Sustainability</a></li>
+            <li><a href="#" class="text-decoration-none text-light"> Media Centre</a></li>
+            <li><a href="#" class="text-decoration-none text-light">News</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Magazine</a></li>
+            <li><a href="#" class="text-decoration-none text-light">History</a></li>
+            <li><a href="#" class="text-decoration-none text-light">join us</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="text-light my-2 ">
+      <div class="row text-center justify-content-center">
+        <div class="col-md-7 justify-content-center align-items-center w-100 ">
+          <ul class="list-inline justify-content-center align-content-center ">
+            <li class="list-inline-item me-lg-5 p-lg-4"><a href="#" class="text-decoration-none text-light"><i
+                  class="bi bi-facebook text-white"></i> FACEBOOK</a></li>
+            <li class="list-inline-item "><span class="text-light">+</span></li>
+            <li class="list-inline-item me-lg-5 p-lg-4"><a href="#" class="text-decoration-none text-light"><i
+                  class="bi bi-instagram  text-white"></i> INSTAGRAM</a></li>
+            <li class="list-inline-item"><span class="text-light">+</span></li>
+            <li class="list-inline-item me-lg-5 p-lg-4"><a href="#" class="text-decoration-none text-light"><i
+                  class="bi bi-linkedin text-white"></i> LINKEDIN</a></li>
+            <li class="list-inline-item"><span class="text-light">+</span></li>
+            <li class="list-inline-item me-md-5 p-md-4"><a href="#" class="text-decoration-none text-light"><i
+                  class="bi bi-tiktok text-white"></i> TIK TOK</a></li>
+                  <li class="list-inline-item me-lg-5 p-lg-4"><a href="#" class="text-decoration-none text-light"><i
+                    class="bi bi-twitch text-white"></i> TWITCH</a></li>
+              <li class="list-inline-item "><span class="text-light">+</span></li>
+            <li class="list-inline-item me-md-5 p-md-4"><a href="#" class="text-decoration-none text-light"><i
+                  class="bi bi-twitter-x text-white"></i> X</a></li>
+            <li class="list-inline-item"><span class="text-light">+</span></li>
+            <li class="list-inline-item me-md-5 p-md-4"><a href="#" class="text-decoration-none text-light"><i
+                  class="bi bi-youtube text-white"></i> YOUTUBE</a></li>
+            <li class="list-inline-item"><span class="text-light">+</span></li>
+
+          </ul>
+        </div>
+      </div>
+      <hr class="text-light my-2 ">
+      <div class="row text-center mt-lg-3">
+        <p>
+          Ferrari N.V. - Holding company - A company under Dutch law, having its official seat in Amsterdam, the
+          Netherlands and its corporate address at Via Abetone Inferiore No. 4, I-41053 Maranello (MO), Italy,
+          registered with the Dutch trade register under number 64060977
+        </p>
+        <p>
+          Ferrari S.p.A. - A company under Italian law, having its registered office at Via Emilia Est No. 1163, Modena,
+          Italy, Companies Register of Modena, VAT and Tax number 00159560366 and share capital of Euro 20,260,000
+        </p>
+        <p>
+          Copyright 2025 - All rights reserved
+        </p>
+      </div>
+    </div>
+ 
+  <div class="bg-secondary py-lg-2 align-content-lg-start" style="background-color: #353738 !important;">
+    <div class="container-fluid">
+      <div class="row justify-content-between align-items-lg-start f-1">
+        <div class="col-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small">Legal</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small ms-3">Privacy
+                Policy</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small ms-3">Cookie
+                Policy</a></li>
+            <li class="list-inline-item"><a href="#"
+                class="text-light text-decoration-none small ms-3">Accessibility</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small ms-3">Submit your
+                privacy request</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small ms-3">Contacts</a>
+            </li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small ms-3">Corporate
+                ENG</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small ms-3">Corporate
+                ITA</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small">Responsible
+                Disclosure</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small ms-3">Reward
+                Anticounterfeiting</a></li>
+            <li class="list-inline-item"><a href="#" class="text-light text-decoration-none small ms-3">Media Centre</a>
+            </li>
+          </ul>
+        </div>
+       
+      </div>
+      </div>
+      
+    </div>
+
+  </div>
+<div class="bg-dark text-center footer-logo ">
+    <div class="container-fluid">
+        <img src="dist/images/shell-logo-png-transparent.png" alt="Shell Logo" class="img-fluid" style="max-width: 100px; height: 40px;">
+    </div>
+</div>
+  
+
+ </footer>
+
+  <!-- FOOTER end -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
