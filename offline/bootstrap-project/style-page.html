@@ -132,6 +132,47 @@
         .info-column .button:hover {
             background-color: #dc2b2b;
         }
+
+        .voucher-title {
+      font-size: 30px;
+      font-weight: 700;
+      color: #0d1b39;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .voucher-card {
+      border: 1px solid #eee;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+      text-align: center;
+      padding: 15px;
+      height: 100%;
+    }
+
+    .voucher-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .voucher-img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .voucher-price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .voucher-sub {
+      font-size: 14px;
+      color: #333;
+    }
+
     </style>
 </head>
 
@@ -166,11 +207,12 @@
             <a class="nav-link text-white fw-semibold" href="style-page.html"> COLLECTIONS </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fw-semibold"> EXPERIENCES </a>
+            <a class="nav-link text-white fw-semibold" href=
+            "experience.html"> EXPERIENCES </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white fw-semibold" href="about-us"> ABOUT US </a>
+            <a class="nav-link text-white fw-semibold" href="about-us.html"> ABOUT US </a>
           </li>
         </ul>
 
@@ -211,53 +253,57 @@
             including city adventures and lifestyle-resort getaways.</p>
     </div>
 
-    <!-- card section
-    <div class="container mx-auto px-4 py-10">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">MUST HAVE</h2>
-        <div class="flex flex-row overflow-x-auto gap-6">
-            <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
-                <div class="relative image-with-text">
-                    <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
-                    <img  src="dist/images/2nd/pic9.webp" alt="Product 1"
-                        class="w-full h-48 object-cover rounded-md ">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800 ">Scuba sweatshirt with Ferrari logo</h3>
-                <p class="text-gray-700 font-bold ">£390</p>
-                <p class="text-sm text-gray-500">2 Colors</p>
-            </div>
-            <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
-                <div class="relative image-with-text">
-                    <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
-                    <img  src="dist/images/2nd/pic10.webp" alt="Product 2"
-                        class="w-full h-48 object-cover rounded-md ">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800 ">Small tote bag in raffia and leather</h3>
-                <p class="text-gray-700 font-bold ">£1,390</p>
-            </div>
-            <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
-                <div class="relative image-with-text">
-                    <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
-                    <img  src="dist/images/2nd/pic11.webp" alt="Product 3"
-                        class="w-full h-48 object-cover rounded-md ">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800 ">Denim jacket</h3>
-                <p class="text-gray-700 font-bold ">£1,290</p>
-            </div>
-            <div class="flex-none w-72 bg-white rounded-lg shadow-md p-4">
-                <div class="relative image-with-text">
-                    <span class="absolute top-2 left-2 text-xs font-semibold text-gray-500">NEW IN</span>
-                    <img src="dist/images/2nd/pic12.webp" alt="Product 4"
-                        class="w-full h-48 object-cover rounded-md ">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800 ">Cotton and silk cardigan</h3>
-                <p class="text-gray-700 font-bold mb-2">£590</p>
-                <p class="text-sm text-gray-500">2 Colors</p>
-            </div>
+
+    <div class="container">
+      <h1 class="voucher-title">MUST HAVE</h1>
+  
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-3">
+          <div class="voucher-card">
+            <img src="dist/images/2nd/pic3.jpg" alt="Gift 10000" class="voucher-img">
+            <div class="voucher-price">£390</div>
+            <div class="voucher-sub">Scuba sweatshirt with Ferrari logo</div>
+            <div class="voucher-price text-decoration-none">BDT 10000.00 <a href="#" class="buy-now">2 Colors</a></div>
+          </div>
         </div>
-    </div> -->
+  
+        <!-- Card 2 -->
+        <div class="col-md-3">
+          <div class="voucher-card">
+            <img src="dist/images/2nd/pic4.webp" alt="Gift 7000" class="voucher-img">
+            <div class="voucher-price">£1,390</div>
+            <div class="voucher-sub">Small tote bag in raffia and leather</div>
+            <div class="voucher-price"> <a href="#" class="buy-now text-decoration-none">1 colors</a></div>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="col-md-3">
+          <div class="voucher-card">
+            <img src="dist/images/2nd/pic8.webp" alt="Gift 5000" class="voucher-img">
+            <div class="voucher-price">£1,290</div>
+            <div class="voucher-sub">Denim jacket</div>
+            <div class="voucher-price"><a href="#" class="buy-now text-decoration-none">3 colors</a></div>
+          </div>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="col-md-3">
+          <div class="voucher-card">
+            <img src="dist/images/2nd/pic12.webp" alt="Gift 3000" class="voucher-img">
+            <div class="voucher-price">£590</div>
+            <div class="voucher-sub">Cotton and silk cardigan</div>
+            <div class="voucher-price"><a href="#" class="buy-now text-decoration-none">2 Colors</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
 
     <div class="container-fluid img-text mt-lg-5 w-100" style="width: 100%;">
-        <div class="image-column align-content-center" style="width: 50% !important; float: left !important;">
+        <div class="image-column align-content-center" style="width: 60% !important; float: left !important;">
 
             <img src="dist/images/2nd/pic1.avif"  alt="Product Image">
         </div>
